@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,9 @@ public class CrimeFragment extends Fragment {
         //Date btn
         mDateButton =(Button) v.findViewById(R.id.crime_date);
         if(mDateButton != null){
-            mDateButton.setText(this.mCrime.getmDate().toString());
+            //chalange of ch#8 done customize date
+            String dateOfToday = DateFormat.format("EEEE,MMM d,yyyy",this.mCrime.getmDate()).toString();
+            mDateButton.setText(dateOfToday);
             mDateButton.setEnabled(false);
         }
         //checkbox code
