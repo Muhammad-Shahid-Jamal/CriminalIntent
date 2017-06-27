@@ -1,2 +1,3 @@
 # CriminalIntent App
-## chap#7
+## chap#8
+### learning fragment and setting widgets 
